@@ -4,6 +4,185 @@
 #include <stdlib.h>
 
 
+
+int board[20][20];
+int M,N;
+int main(int argc, const char* argv[])
+{
+	scanf("%d%d",&M,&N);
+	getchar();
+	int i=0, j=0;
+	
+	for (i; i<M; i++) {
+		for (j; i<N; j++){
+			board[i][j] = getchar() == '0' ? 0 : 2;
+	
+			
+		}
+		getchar();
+	}
+	
+	for (i; i<M; i++) {
+		for (j; j<N ;j++) {
+			printf("%d",board[i][j]);	
+		}
+		putchar('\n');
+	} 
+
+
+
+}
+
+
+
+/*
+==========
+int main(int argc, const char* argv[])
+{
+	int array[3][5];
+	
+	int (*p) [5];	// A pointer with a type of int pointed to an array that includes 5 elements.
+	p = array;
+
+	return 0;
+}
+
+
+int main(int argc, const char* argv[])
+{
+	int a[11] = {0,9,8,7,6,5,4,3,2,1};
+	int b[11] = {1,2,3,4,5,6,7,8,9,9};
+	int sum[11] = {0};
+	int carry = 0;
+	int i=0;
+	for (i ; i<11; i++)
+	{	
+		int s;
+		s =a[i] + b[i] + carry;
+		carry = s/10;
+		sum[i]= s%10;
+	}
+	int j=10;
+	for (j;j >=0;j--)
+	{
+		printf("%d", sum[j]);
+	}
+	printf("\n");
+	return 0;
+}
+
+
++++++++++++++++++++++++++++
+int findX(int* array, int size, int x)
+{
+	int i =0;
+	int index = -1;
+	int flag = 0;
+	for (i ; i<size ; i++) 
+	{
+		if(array[i] == x) 
+		{ 
+			flag = 1;
+			index = i;
+		}
+	}
+	return index;
+}	
+int getX(int* array, int size, int k, int* px)
+{
+	
+	if (k>size || k<0 )
+	{
+		return -1;
+		
+	} else
+	{
+		*px = array[k];
+		return 0;
+	}
+}
+
+int findMax (int *array, int size)
+{
+	int max = array[0];
+	int i = 0;
+	for (i; i<size; i++)
+	{
+		if (max < array[i])
+		{
+			max = array[i];
+		}
+	}
+	return max;
+}
+
+int main(int argc, const char* argv[])
+{
+	int array[10] = {111,22,3333,44,55};
+	
+//	while (1)
+//	{
+		int x, k,flag,max;
+	//	printf("input one number: ");
+	//	scanf("%d", &k);
+		
+		max = findMax(array, 10);
+//		k = findX(array, 10, x);	
+		flag = getX(array, 10, k, &x);
+		if (flag<0)
+		{
+			printf("exceed range of array.\n");
+		}else 
+		{
+			printf("%d\n", x);
+		printf("%d\n", max);
+//	}
+	return 0;
+}
+
+
+++++++++++++++++++++++
+int getMax(int *p, int size)
+{
+	int max = p[0];
+	int i = 1;
+	for ( i; i<5; i++)
+		if(max < p[i])
+			max = p[i];
+	return max;
+}
+
+int main(int argc, const char* argv[])
+{
+	int array[] = {111,2,3333,4,55};
+	int max;
+	max = getMax(array, 5);
+	printf(" max = %d \n",max);
+
+	return 0;
+}
+
+
+
+=============================
+int add(int x, int y);
+int main(int argc, const char* argv[])
+{
+	int a ,b;
+	a = 3;
+	b = 5;
+	int sum;
+	sum = add(a, b);
+	printf("sum = %d \n",sum);
+	return 0;
+}
+int add(int x,int y)
+{	
+	return x + y;
+}
+
+
+++++++++++++++++++
 int main()
 {
 	int number;
@@ -24,9 +203,6 @@ int main()
 	return 0;
 }
 
-
-
-/*
 ++++++++++++++++++++++++
 int main()
 {
